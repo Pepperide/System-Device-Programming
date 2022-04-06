@@ -1,5 +1,7 @@
 /*
 *   Lab03 exercise 01 version I/O Multiplexing
+*
+*   NOTE: 
 */
 #include <unistd.h>
 #include <stdlib.h>
@@ -89,8 +91,9 @@ int main(){
                     FD_SET(p1[0],&readSet); // Set the corresponding bit of p1[0]
                     FD_SET(p2[0],&readSet); // Set the corresponding bit of p2[0]
                     
-                    while(nToReadP1>0 || nToReadP2>0){                       
+                    while(nToReadP1>0 || nToReadP2>0){                                         
                         if(select(FD_SETSIZE,&readSet,NULL,NULL,&tvptr)>0){
+                            printf("entrato nella select\n");
                             if(FD_ISSET(p1[0],&readSet)){
                                 //P1[0] can be read
                                 nReadP1 = read(p1[0],s1_pointer,STR_SIZE*sizeof(char));
