@@ -1,0 +1,4 @@
+12345 Acceptable 26.50
+146467 Average 23.75
+875    Maximum  98.57
+32 Minimum       56.58
