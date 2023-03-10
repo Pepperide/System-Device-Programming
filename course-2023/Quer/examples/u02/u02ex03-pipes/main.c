@@ -42,8 +42,9 @@ int main() {
             close(p23[1]);
             close(p31[0]);
             p3(p23[0],p31[1]);
-
         }
+        waitpid(pid1,(void *)0,(void *)0);
+        waitpid(pid2,(void *)0,(void *)0);
     }
     return 0;
 }
