@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
         close(p21[0]);
         p2(p12[0],p21[1],argv[1]);
     }
-
+    wait((void *)0);
     return 0;
 }
 
