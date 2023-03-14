@@ -100,6 +100,12 @@ where
 - "R 3", "R 1", "W 1", etc. are the user inputs
 - all other characters belong to the program output.
 
+Suggestions
+-----------
+Use the system call lseek to access the file randomly.
+As all records have the same size, it is possible to define the position
+of each record. 
+
 
 
 Exercise 03
@@ -192,11 +198,12 @@ Code implementation with processes
 Write a C program that receives two integer values on the command line,
 h and n, and it generates a process tree of height h and degree n.
 
-For example, if h=2 and n=2:
+For example, if h=3 and n=2:
 - the primary process creates two processes
 - each one of these two processes creates two other processes
 - each one of these four processes creates two other processes
-at this point, eight leaf processes run, and the program must stop.
+at this point, eight processes run on the tree leaf, and the program
+stops.
 
 More in detail, each node of the tree is a process.
 The initial process generates n child jobs and ends.
