@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "Rc.h"
 using namespace std; //You can avoid using std:: since compiler will check the function in the default namespace
 
 void sumExample(){
@@ -52,11 +53,23 @@ void vectorExample(){
     }
     cout<<endl;
 }
+
+void classExample(){
+    Rc r;
+    Rc2 p;
+
+    r.set_code(15);
+    cout<<r.get_code()<<endl;
+    cout<<"From the friend class: "<<p.get_code(r)<<endl;
+}
 int main(int argc, char** argv) {
 
     // sumExample();
     // reference();
     // casting();
-    vectorExample();
+    // vectorExample();
+
+    classExample();
+
     return 0;
 }
