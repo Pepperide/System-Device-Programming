@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     do{
         printf("> ");
         scanf("\n%c",&cmd);
-        
+
         if(cmd!='E'){
             lseek(0,1*sizeof(char),SEEK_CUR); // Set the stdout cursor back to the correct position
             scanf("%d",&row);
