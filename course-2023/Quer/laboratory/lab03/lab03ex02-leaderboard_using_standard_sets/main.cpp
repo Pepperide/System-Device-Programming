@@ -10,6 +10,10 @@ int main() {
     l.addPlayer("Luca",104);
     l.addPlayer("Giacomo",99);
 
-    l.printTopPlayers(3);
+    l.removePlayer("Mario");
+    l.updateScore("Giuseppe",105);
+
+    l.printTopPlayers(5);
+
     return 0;
 }

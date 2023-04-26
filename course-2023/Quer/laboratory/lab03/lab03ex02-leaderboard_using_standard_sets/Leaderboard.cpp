@@ -11,8 +11,12 @@ void Leaderboard::addPlayer(const std::string &name, int score) {
 }
 
 void Leaderboard::removePlayer(const std::string &name) {
-    auto pred = [name](Player p){ return p.getName().compare(name);};
-    players.erase(std::remove_if(players.begin(),players.end(),pred));
+    for(auto it=players.begin();it!=players.end();it++){
+        if( ((Player)*it).getName() == name){
+            players.erase(it);
+        }
+    }
+
 }
 
 void Leaderboard::updateScore(const std::string &name, int newScore) {
